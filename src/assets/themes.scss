@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'mixin';
+@import "buttons";
+// 临时绿色
+.icon-weixin-l {
+    color: $status-green
+}
+
+.icon-weixin-l.text-theme {
+    color: $status-green
+}
+
+// @for $i from 1 to 2 {
+//     .theme-#{nth($skin, $i)} {
+//         // 实时路况
+//         $bg-blue: #000;
+//         // 测量工具
+//         $bg-green: #000;
+//         // 警力
+//         $bg-light-blue: #000;
+//     }
+// }

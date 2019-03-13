@@ -1,0 +1,294 @@
+// Variables
+// ------
+// ---------mapToolBar------------ 
+$skin:deep,light;
+// 实时路况
+$bg-blue:#0D94FF;
+// 测量工具
+$bg-green:#50E3C2;
+// 警力
+$bg-light-blue:#2CD6F1;
+// 警情
+$bg-light-green:#7ED321;
+// 监控视频
+$bg-orange:#F5A623;
+// 沙盘标绘
+$bg-purple:rgba(172, 71, 193, 0.84);
+// 周边资源
+$bg-sky-blue:#4A90E2;
+// 时间轴
+$bg-deep-purple:rgba(54, 76, 182, 0.76);
+// ----------mapToolBar-------------- 
+
+//-----------全部功能------------------
+
+// 临机指令
+$bg-azury:#2EA2FF;
+// 通报单位
+$bg-light-purple:rgba(90, 111, 215, 0.76);
+//警情 级别
+$level1:#f82f00;
+$level2:#ff9900;
+$level3:#ffea00;
+$level4:#f7f7f7;
+$status-gray:#9B9B9B;
+//存档-//已反馈 
+$status-red:#F74357;
+// 处警失败
+$status-yellow:#DEFF00;
+$status-white:#E6F5FF;
+//已到达 
+$status-green:#03C700;
+//已接收 
+$themecolor:#0D94FF;
+$themefontcolor:#fff;  
+$themestep: #93caff;
+//------------请示报告--------------
+// 背景色
+$bgc_orange: orange;
+$background-cyan-gray: #F5F6F7;
+$background-black-gray: rgba(51, 51, 51, .5);
+$background-cyan-gray-transparent: rgba(246, 247, 249, .8);
+$background-gray: #F8F9FA;
+$background-white: $themefontcolor;
+$background-hui: #bbc6d0;
+$background-block00: rgba(0,0,0,0);
+$background-block04: rgba(0,0,0,0.4);
+$background-rgba04: rgba(24,162,245,0.4);
+$background-block002: rgba(0,0,0,.02);
+$background-block004: rgba(0,0,0,.04);
+$background-block05: rgba(0,0,0,0.5);
+$background-block07: rgba(0,0,0,0.7);
+$background-block15: rgba(0,0,0,0.15);
+$background-blue: rgba(13, 148, 255, 0.2);
+$background-deep-gray: rgba(216, 223, 234, 0.2);
+$background-138: rgb(141, 138, 138);
+$background-hui216: rgba(216, 216, 216, 0.48);
+$background-black00: rgba(255, 255, 255, 0);
+$bgc-red: #c70501ad;
+$bgc-hotred: #c70501;
+$bgc-blue: #0099ff;
+$bgc-black: #1E282C;
+$color-hui: #e4e4e4;
+$color-left: #55bafd;
+$color-right: #7e7e7e;
+$color-border-hui: #cccccc;
+$color-ddd: #ddd;
+$color-bbb: #bbb;
+$color-888: #888888;
+$color-black444: #444447;
+// 短信内容背景色
+$content-background: rgba(21,56,107,0.05);
+// 线条
+$solid-color: rgba(155, 155, 155, .26);
+$solid-gray-color: gray;
+$solid-all-color: #F5A623;
+$solid-yellow-color: #E5D82F;
+$solid-green-color: #50E3C2;
+$solid-red-color: #F74357;
+$border_line_hui: #a9a1a1;
+$border_line_bllue: #81c4ff;
+$border_line_gray: #1e5c8b;
+// 字体颜色
+$text-title-black: #000;
+$text-title-hui: #aaa;
+$text-title-white: #F2F7FC;
+$text-title-whiteblue: #B7DFFF;
+$text-title-black-gray: #333333;
+$text-title-gray: #666666;
+$text-title-light-gray: #999999;
+$text-filter-color: #00A1FC;
+$text-bgc-white08: rgba(255,255,255,0.8);
+
+//-----------沙盘标会 点--------------
+$sendboxPlot-red: #f00;
+$sendboxPlot-gray: #606266;
+$sendboxPlot-green: #00ff00;
+$sendboxPlot-black: #131313;
+$sendboxPlot-red-soil: #b59393;
+$sendboxPlot-cyan-gray: #465765;
+$sendboxPlot-red-gray: #b3b3b3;
+$sendboxPlot-red-white: #f8f8f8;
+$sendboxPlot-black-gray: #2b2b2b;
+$sendboxPlot-cyan-white: #D9ECFF;
+$sendboxPlot-pink: #F74357;
+$sendboxPlot-wihte: #E9F4FF;
+$sendboxPlot-hotpink: #FD1B65;
+
+//-----------报告参战队伍---------------
+$reportarmy-gray: #F7F8F9;
+$reportarmy-red-gray: #D3D3D3;
+$reportarmy-white: $themefontcolor;
+$reportarmy-black: #000;
+$reportarmy-black-gray-shallow: #666666;
+$reportarmy-black-gray: #040404;
+
+// 实时警情
+$gray84: #848484;
+$bgc-d8: #D8D8D8;
+$color_rgb_green: rgb(112, 205, 50);
+$color_rgb245: rgb(230, 245, 255);
+$color_rgb230: rgb(245, 240, 240);
+$color_rgb166: rgba(245,166,35,1);
+$color_rgb197: rgb(201, 197, 197);
+$color_rgba_blue: rgba(13, 148, 255, 0.27);
+$color_rgba_black04: rgba(51, 51, 51, 0.04);
+$color_eee: #eee;
+$color_gray: #656565;
+$color_lightgray: #545454;
+$color_rgba_white08: rgba(255, 255, 255, 0.8);
+$color_rgba_white42: rgba(153, 153, 153, .42);
+$color_rgba_black03: rgba(000, 000, 000, 0.3);
+$color_rgba_black06: rgba(0, 0, 0, 0.6);
+$color_common_blue: #50E3C2;
+$color_common_lightblue: #BDDEFF;
+$color-orange-yellow: #F5A623;
+$color_common_red: #F74357;
+$color_common_green: #7ED321;
+$color_common_lightpink: #f0d1e1;
+$color_common_hotpink: #ff8400;
+$color_lightblue: rgb(136, 207, 255);
+$color_deepblue: rgba(129,196,255,1);
+
+//重大案列表颜色
+$color333: #333333;
+$color999: #999999;
+$coloreee: #eee;
+$colorccc: #ccc;
+$colorright: #F84F61;
+$color_e6: #e6e6e6;
+$color_fa: #fafafa;
+$colorDCDCDC: #DCDCDC;
+$colorBDDEFF: #BDDEFF;
+$colorlisthover: #F7F9FA;
+$color_case_black: rgba(0,0,0,0.12);
+$color_case_lightblack: rgba(156,156,156,0.12);
+$color_case_blue: #5BC0DE;
+$color_case_red: rgb(173, 37, 37);
+$color_grey: grey;
+$color_lightgrey: lightgrey;
+
+//mappopup
+$color_map_green: #47BBFE;
+$color_map_light_blue: #0685BC;
+$color_map_gray: #4A4A4A;
+$color_map_blue: dodgerblue;
+
+///
+// 专家咨询 
+$content_color_blue: #3385FF;
+$content_color: rgba(155,155,155,0.26);
+$content_bgc: rgba(246,247,249,0.80);
+$content_bgcblack: rgba(0,0,0,0.80);
+$data_color: #666666;
+$white_bgc: $themefontcolor;
+$doc_bgc: #F34B4B;
+$darkwhite_bgc: #eaf8ff;
+$black_color: #000000;
+$textbox_border: #DBDBDB;
+$textbox_border_line: #DDDCE0;
+$search_bgc: rgba(0,0,0,0.04);
+$search_border: rgba(255,255,255,0.20);
+$audiofrequency_bgc: rgba(243, 243, 243, 0.8);
+$audiofrequency_bgc473: rgba(135, 206, 250, 0.473);
+
+// 指令详情 
+$th_bgc: #e0e2e7;
+$tr_bgc: #e9f4ff;
+$tr_gary: #4A4A4A;
+$tr_black: rgba(0,0,0,0.5);
+
+// 处置调度 
+$tip_color: #0080e5;
+$tbtitle_bgc: #EEEEEE;
+$myDel_red: red;
+
+//------------现场信息----------------
+$policeforce-white: $themefontcolor;
+$policeforce-black-gray: #575757;
+$policeforce-azury: #11a7fd;
+$policeforce-text-title-gray: #333333;
+$policeforce-text-title-black-gray: #2A2A2A;
+$policeforce-text-title-black-gray-shallow: #464646;
+$policeforce-white-gray: #c0c2c5;
+$policeforce-black-gray-shallow: #666666;
+$policeforce-yellow: #FFD925;
+$policeforce-lightyellow: #FFE419;
+$policeforce-green: #66CC99;
+$policeforce-white-gray-shallow: #E1E2E4;
+$policeforce-blue-gray: rgb(196, 226, 252);
+$policeforce-blue-gray-shallow: #d9ebfd;
+$policeforce-deep-blue: rgba(18, 55, 84, 0.25);
+$policeforce-blue-light: rgb(71, 153, 247);
+
+//-------------实战指挥---------------
+$plansteps-red-gary: #D3D3D3;
+$plansteps-black-gray: #575757;
+$plansteps-black-gray-shallow: #545454;
+$plansteps-red-gary-shallow: #f7f7f7;
+$plansteps-blue-gray: #7B7C7E;
+$plansteps-white-gray: #eee;
+$plansteps-blue-gray-shallow: #caced4;
+$plansteps-purple: slateblue;
+$plansteps-blue-shallow-gray: #c5d4e8;
+$plansteps-blue-shallow: #00a1fd;
+$plansteps-red: #f00;
+$light-red: #FF5722;
+$plansteps-white-gray-shallow: #E1E2E4;
+$plansteps-text-title-black-gray: #2A2A2A;
+$plansteps-blue-white: #DEF0FF;
+// 深色系
+$plansteps-blur-green: #2CD6F1;
+$plansteps-bg-green : rgba(114,233,165,1);
+$plansteps-theme-color : rgba(74,196,255,1);
+$plansteps-deep-yellow: rgba(255,159,68,1);
+$plansteps-background: rgba(19,54,90,0.95);
+$sandPoltting-box-shadow: rgba(24,162,245,0.50);
+$bgc_rgba_hui: rgba(216, 216, 216, 0.60);
+$bgc_rgba_blue: rgb(19, 93, 150);
+$plansteps-white: $themefontcolor;
+$plansteps-white: $themefontcolor;
+//---------------预案------------------
+$plan-blue-gray: #526069;
+$deepskyblue-gray: deepskyblue;
+
+//---------------业务弹框-------------------
+$businessMessage-white: rgba(255, 255, 255, 0.95);
+
+//---------------toolbar-------------------
+$toolbat-blur: #337ab7;
+$toolbat-blur-shallow: #2e6da4;
+$toolbat-green: #4cae4c;
+$toolbat-green-shallow: #5cb85c;
+$toolbat-sky-blur: #46b8da;
+$toolbat-sky-blur-shallow: #5bc0de;
+$toolbat-yellow: #eea236;
+$toolbat-yellow-shallow: #f0ad4e;
+$toolbat-red: #d43f3a;
+$toolbat-red-shallow: #d9534f;
+$toolbat-white: rgba(255, 255, 255, 1);
+$toolbat-gray: #9f9f9f;
+
+//---------------全局搜索-------------------
+$globalsearch-gary-transparent: rgba(216,216,216,0.60);
+$globalsearch-gary-gray: rgba(255, 255, 255, 0.96);
+
+//----------------mapfunctionbottom渐变------------------
+$linear-gary-lightblue: rgba(53,149,251,0.60);
+$linear-gary-darkblue: rgba(24,141,245,0.20);
+$linear-gary-light_blue: rgba(151,216,255,0.50);
+$bgc-gary-light_blue: rgba(24,162,245,0.40);
+$bgc-gary-deep_blue: rgba(24,162,245,0.70);
+//发送的任务列表时间轴颜色
+$time-scaletrue:red;
+// toolbar 右侧定位
+$tool-y-r:69px;
+//深色背景路径
+$bgurl:'/resources/images/theme-deep/';
+$fonturl:'/resources/theme/default/fonts/';
+//title 初始化值 
+$fontfamily:Microsoft YaHei;
+$fontsize:18px;
+$colorleft:rgba(0,140,255,0.1);
+$colorcenter:rgba(40,160,255,1);
+$colorright:rgba(0,140,255,0.1);

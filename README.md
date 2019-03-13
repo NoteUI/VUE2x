@@ -56,6 +56,9 @@ filters{
 }
 
 # 路由
+1.安装
+npm install vue-router --save
+2.
 var router = new VueRouter(
 routers:[{
     path:"/",

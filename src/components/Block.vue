@@ -5,9 +5,9 @@
       <!-- <li v-on:click="getInfo">{{name}}</li> -->
     </ul>
     <ul>
-      <input type="text" v-on:keyup.enter="getKeyinfo" class="input">
-      <button v-on:click="getpush">按钮</button>  
-      <button v-on:click="getodd">奇数</button>  
+      <input class="ds-input" type="text" v-on:keyup.enter="getKeyinfo" >
+      <button class="ds-btn ds-btn-primary" v-on:click="getpush">按钮</button>  
+      <button class="ds-btn ds-btn-primary" v-on:click="getodd">奇数</button>  
     </ul>
   </div>
 </template>
@@ -46,11 +46,12 @@ export default{
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-li { width: 80%;  margin: 10px auto; border-bottom: 1px solid rgba(0,0,0,0.2);
+
+li { width: 76%;  margin: 10px auto; border-bottom: 1px solid rgba(0,0,0,0.1);
   font-size: 2em; color: green;
 }
 a {
   color: #42b983;
 }
-.btn{background: #ff0 !important; color: #000 !important;}
+
 </style>

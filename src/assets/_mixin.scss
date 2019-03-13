@@ -1,0 +1,440 @@
+//应用于顶部定位
+@mixin fixedbox {
+    position: fixed;
+    z-index: 799;
+}
+
+// 主题样式混入
+// 
+@mixin frame-backgroud {
+    background: rgba(24, 162, 245, 0.20);
+    border: 1px solid #0675BC;
+    box-shadow: inset 0 0 10px 0 rgba(24, 162, 245, 0.60);
+}
+
+// 
+@mixin title($fontfamily, $fontsize) {
+    font-family: $fontfamily;
+    font-size: $fontsize;
+    line-height: 1.4;
+}
+
+@mixin themebackground($themebg) {
+    .sidebar.sidebar .side-ul,
+    #deeptoolbar,
+    .panel-tab-content {
+        background: $themebg !important;
+    } //head svg样式
+    #Rectangle-46-Copy-2 {
+        background: $themebg*3 !important;
+    }
+    #Rectangle-46-Copy {
+        background: $themebg*2 !important;
+    }
+    #Rectangle-46 {
+        background: $themebg !important;
+    }
+}
+
+@mixin themefont($themecolor) {
+    .li-right .right-d,
+    .panel-title-alarm,
+    .panel-title-Scene,
+    .plan,
+    .button3 {
+        color: $themecolor !important;
+    }
+}
+
+@mixin themeinput($themecolor) {
+    input::-webkit-input-placeholder {
+        color: $themecolor;
+    }
+}
+
+@mixin fa-icon {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    vertical-align: -.125em;
+}
+
+@mixin fa-icon-rotate($degrees, $rotation) {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation})";
+    transform: rotate($degrees);
+}
+
+@mixin fa-icon-flip($horiz, $vert, $rotation) {
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation}, mirror=1)";
+    transform: scale($horiz, $vert);
+} // Only display content to screen readers.
+@mixin sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+} // Use in conjunction with .sr-only to only display content when it's focused.
+@mixin sr-only-focusable {
+    &:active,
+    &:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+}
+
+//应用于dialog Window弹框
+@mixin dialog-title {
+    background: linear-gradient(128deg, transparent 14px, #58a 0) top left, linear-gradient(-134deg, transparent 9px, #58A 0) top right;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+}
+
+@mixin kendo-layout {
+    background: linear-gradient(-45deg, transparent 16px, #58a 0) bottom right, linear-gradient(46deg, transparent 11px, #58a 0) bottom left, linear-gradient(140deg, transparent 25px, #58a 0) top left, linear-gradient(-135deg, transparent 15px, #58a 0) top right;
+    background-size: 50% 20%;
+    background-repeat: no-repeat;
+}
+
+/** 深色系主题颜色提取 */
+
+// 头部按钮
+@mixin head-button {
+    background-image: linear-gradient(0deg, #134D7A 51%, #1E5C8B 53%);
+    border: 2px solid #0685BC;
+    box-shadow: inset 0 0 20px 0 #18A2F5;
+}
+
+@mixin head-button-focus {
+    background-image: linear-gradient(-180deg, #FFC904 0%, #F7851C 98%);
+    box-shadow: inset 0 0 10px 0 #F5A623;
+    border: 2px solid #F5A623;
+}
+
+// 标题背景
+@mixin title-background {
+    // background-image: linear-gradient(-90deg, #1A5CA8 0%, rgba(24,162,245,0.00) 91%);
+    background-image: linear-gradient(-91deg, rgba(24, 162, 245, 0) 4%, #1A5CA8 100%);
+}
+
+@mixin head-title($bgurl) {
+    // background-image: linear-gradient(-90deg, #1A5CA8 0%, rgba(24,162,245,0.00) 91%);
+    background: url(#{$bgurl}title-1.svg) no-repeat left center; // background: url(#{$bgurl}title-1.svg) no-repeat left center;
+}
+
+@mixin body-title($bgurl) {
+    // background-image: linear-gradient(-90deg, #1A5CA8 0%, rgba(24,162,245,0.00) 91%);
+    // background: url(#{$bgurl}title-2.svg) no-repeat left center;
+    background: url(#{$bgurl}title-2.svg) no-repeat left center;
+}
+
+// 深色系背景
+@mixin deep-background {
+    background: rgba(19, 54, 90, 0.95);
+    border: 2px solid #0685BC;
+    box-shadow: inset 0 0 30px 0 rgba(24, 162, 245, 0.50);
+}
+
+// 深色系背景不透明
+@mixin deep-background1 {
+    background: rgba(19, 54, 90, 1);
+    border: 2px solid #0685BC;
+    box-shadow: inset 0 0 30px 0 rgba(24, 162, 245, 0.50);
+}
+
+// 深色系---svg---背景
+@mixin deep-svg-background {
+    // background: url(#{$bgurl}panel.svg) no-repeat top left;
+    background: url(#{$bgurl}panel-1.svg) no-repeat top left;
+    background-size: 100% auto;
+}
+
+// 按钮渐变--指令下派--案件退回
+@mixin orderDistribute {
+    // background-image: linear-gradient(0deg, #134D7A 51%, #1E5C8B 53%);
+    // border: 1px solid #0685BC;
+    // box-shadow: inset 0 0 20px 0 #00B2FF;
+    opacity: 0.6; // background-image: radial-gradient(50% 182%, #5DB5FF 100%, rgba(52, 165, 251, 0.00) 100%);
+    border-radius: 4px;
+    background: url(#{$bgurl}window-list-btn-hover.svg) no-repeat top left;
+}
+
+// 启动指挥
+@mixin commandGo {
+    background-image: linear-gradient(-180deg, #FAD961 0%, #F76B1C 100%);
+}
+
+// 步骤事件
+@mixin themeframe {
+    background: rgba(6, 133, 188, 0.20);
+    border: 1px solid #18A2F5;
+    box-shadow: inset 0 0 10px 0 #18A2F5;
+}
+
+@mixin step-button-hover-shallow {
+    background: rgba(245, 166, 35, 0.70) !important;
+    border: 1px solid #FFD925 !important;
+    box-shadow: inset 0 0 10px 0 rgba(245, 166, 35, 0.80) !important;
+}
+
+@mixin step-button-hover-deep {
+    background: rgba(245, 166, 35, 0.50) !important;
+    border: 1px solid #F5A623 !important;
+    box-shadow: inset 0 0 10px 0 #F5A623 !important;
+}
+
+@mixin step-button-focus {
+    background: rgba(24, 162, 245, 0.50) !important;
+    border: 1px solid #18A2F5 !important; // box-shadow: inset 0 0 10px 0 #18A2F5;
+}
+
+@mixin step-title {
+    background-image: linear-gradient(0deg, #134D7A 51%, #1E5C8B 53%) !important;
+}
+
+@mixin step-title-border {
+    @include step-title;
+    border: 2px solid rgba(24, 162, 245, 0.40);
+}
+
+@mixin timeline {
+    border: 2px solid #18A2F5;
+    box-shadow: inset 0 0 5px 0 #18A2F5;
+}
+
+/** 情报档案 */
+
+// arrowleft 背景
+@mixin arrow-background {
+    background: rgba(24, 162, 245, 0.2);
+    border: 1px solid #0685BC;
+    box-shadow: inset 0 0 10px 0 #18A2F5;
+}
+
+// 
+@mixin frame-backgroud {
+    background: rgba(24, 162, 245, 0.20);
+    border: 1px solid #0675BC;
+    box-shadow: inset 0 0 10px 0 rgba(24, 162, 245, 0.60);
+}
+
+// 
+@mixin title($fontfamily, $fontsize) {
+    font-family: $fontfamily;
+    font-size: $fontsize;
+    line-height: 1.4;
+}
+
+@mixin themebackground($themebg) {
+    .sidebar.sidebar .side-ul,
+    #deeptoolbar,
+    .panel-tab-content {
+        background: $themebg !important;
+    }
+    svg {
+        #Rectangle-46-Copy-2 {
+            background: $themebg*3 !important;
+        }
+        #Rectangle-46-Copy {
+            background: $themebg*2 !important;
+        }
+        #Rectangle-46 {
+            background: $themebg !important;
+        }
+    }
+}
+
+@mixin themefont($themecolor) {
+    .li-right .right-d,
+    .panel-title-alarm,
+    .panel-title-Scene,
+    .plan,
+    .button3 {
+        color: $themecolor !important;
+    }
+}
+
+@mixin ds-ico($fontsize, $themecolor) {
+    width: $fontsize;
+    height: $fontsize;
+    font-size: $fontsize;
+    color: $themecolor;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*mapfunction--底部全部功能*/
+
+// 图标hover事件
+@mixin icon-hover {
+    transform: scale(1.5);
+    position: relative;
+    bottom: 12px;
+}
+
+// 图标点击事件
+@mixin icon-click {
+    position: relative;
+    bottom: 12px;
+    transform: scale(1.5);
+}
+
+// 时间轴
+@mixin timeline-background {
+    background: rgba(19, 54, 90, 0.95);
+    border: 2px solid #0685BC;
+    border: 2px solid rgba(24, 162, 245, 0.40);
+}
+
+@mixin timeline-circular-big {
+    background: #1680C6;
+    border: 3px solid rgba(24, 162, 245, 0.26);
+    box-shadow: 0px 0px 0px 3px rgba(24, 162, 245, 0.26);
+}
+
+@mixin timeline-border {
+    background: rgba(9, 39, 69, 0.10);
+    border: 2px solid rgba(34, 128, 191, 0.50);
+    border-radius: 4px;
+}
+
+@mixin ico-box {
+    background: rgba(245, 166, 35, 0.40);
+    border: 1px solid #F5A623;
+    box-shadow: inset 0 0 10px 0 #F5A623;
+}
+
+// @mixin inputHeight($lineHeight) {
+//     top: $lineHeight;
+// }
+/** 处置日志 */
+
+@mixin dailyrecord-botton-yellow {
+    border: 2px solid #D98949 !important;
+    background-image: linear-gradient(181deg, rgba(250, 187, 97, 0), rgba(197, 102, 26, 0.5)) !important;
+}
+
+@mixin dailyrecord-botton-blue {
+    border: 2px solid #45AAFF !important;
+    background-image: radial-gradient(135px 30px at 50% 100%, rgba(42, 161, 255, .4), rgba(0, 149, 255, 0)) !important;
+}
+
+@mixin dailyrecord-background {
+    background: rgba(10, 43, 77, 0.80) !important;
+}
+
+@mixin dailyrecord-border-deep {
+    border: 2px solid rgba(34, 128, 191, 0.23) !important;
+}
+
+@mixin dailyrecord-border-ligth {
+    border: 2px solid #2280BF !important;
+}
+
+// 左侧列表样式
+@mixin sidebar-lfet($bgurl, $themefontcolor) {
+    .div-title {
+        position: relative;
+        width: 100%;
+        height: 43px;
+        padding-top: 2px;
+        .nav-t {
+            position: relative;
+            display: inline-block;
+            width: 208px;
+            height: 48px;
+            top: -5px;
+            cursor: pointer;
+            display: inline-block;
+            color: $themefontcolor;
+            @include title(apple, 22px);
+            padding-left: 13px;
+            line-height: 47px;
+            z-index: 999;
+        }
+        .nav-common {
+            left: 0px;
+            z-index: 999;
+            padding-left: 20px;
+            padding-top: 1px;
+            background: url(#{$bgurl}tab-hover-diwen.png) no-repeat left 22px,
+            url(#{$bgurl}tab-hover.svg) no-repeat left center;
+        }
+        .nav-major {
+            left: 172px;
+            position: absolute;
+            top: -2px;
+            padding-left: 34px;
+            background: url(#{$bgurl}tab.svg) no-repeat center;
+        }
+        .titActive {
+            background: url(#{$bgurl}tab-hover-diwen.png) no-repeat right 22px,
+            url(#{$bgurl}tab-a.svg) no-repeat left center;
+        }
+        .noCommon {
+            background:url(#{$bgurl}tab-hover-a.svg) no-repeat left center;
+        }
+    }
+}
+
+// 步骤事件
+@mixin theme_frame {
+    background: url(#{$bgurl}plane-node.svg) no-repeat left center;
+}
+
+@mixin theme_frame_secondary {
+    background: url(#{$bgurl}steps-default.svg) no-repeat left center;
+}
+
+@mixin theme_frame_secondary_hover {
+    background: url(#{$bgurl}steps-hover.svg) no-repeat left center;
+}
+
+@mixin theme_frame_secondary_point {
+    background: url(#{$bgurl}steps-done.png) no-repeat left center;
+}
+
+@mixin theme_frame_secondary_long {
+    background: url(#{$bgurl}steps-default-long.svg) no-repeat left center;
+}
+
+@mixin linear-shade($colorleft, $colorcenter, $colorright) {
+    background: -webkit-linear-gradient(left, $colorleft, $colorcenter, $colorright);
+}
+
+@mixin theme-input {
+    height: 34px;
+    background: rgba(8, 35, 63, 0.6);
+    border: 2px solid rgba(34, 128, 191, 0.3);
+    border-radius: 5px;
+    color: #B4D0E8;
+}
+
+@mixin cardlist-li {
+    background-image: radial-gradient(135px 19px at 50% 100%, rgba(42, 161, 255, .4), rgba(0, 149, 255, 0));
+}
+
+@mixin slant-bg($bgurl) {
+    background:url(#{$bgurl}tabbg.png) repeat-x left center;
+}
+
+@mixin outshadow {
+    box-shadow: inset 0 0 30px 0 rgba(13, 148, 255, 0.5), 0 0 12px 8px rgba(13, 148, 255, .6);
+}
+
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

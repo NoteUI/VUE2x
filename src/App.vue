@@ -2,6 +2,7 @@
   <div id="app">
     <img src="./assets/logo.png">
     <HelloWorld/>
+     <router-view></router-view>
     <div class="lelle">
       <Block/>
     </div>
@@ -21,9 +22,9 @@ export default {
 };
 </script>
 
-<style >
-@import './assets/bootstrap/dist/css/bootstrap.min.css';
+<style  lang="scss">
 @import './assets/css/base.css';
+@import './assets/themes.scss';
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,8 +32,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-  .contnter{
-    width: 100px;
-  }
+  padding-bottom: 2em;
 }
+h2{width: 80%; margin: 0 auto; padding-top: 3em; padding-bottom: 2em; border-bottom: 2px solid rgba(57, 132, 57, .5);}
 </style>

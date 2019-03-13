@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <!-- <h1>{{ msg }}</h1>
     <h2>模板语法</h2>
     <ul class="tipBox">
       <span>{{乐乐}}</span>
@@ -47,12 +47,12 @@
       </li>
     </ul>
     <ul>
-      <button  class="btn btn-success" v-on:click="num+=1" >按钮++</button>
+      <button  class="btn btn-success" v-on:click="num+=1" >dianji</button>
       <p>{{num}}</p>
       <button class="btn btn-primary" v-on:click="handerClick" >取反显示隐藏</button>
-    </ul>
+    </ul> -->
 
-
+   
   </div>
 </template>
 

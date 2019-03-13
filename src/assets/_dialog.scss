@@ -1,0 +1,348 @@
+/** dialog样式重构 */
+
+.theme-#{nth($skin, 1)} {
+    input {
+        -webkit-appearance: none;
+    }
+    textarea {
+        -webkit-appearance: none;
+    }
+    input::-webkit-input-placeholder {
+        color: #B4D0E8;
+        font-size: 12px;
+    }
+    textarea::-webkit-input-placeholder {
+        color: #B4D0E8;
+        font-size: 12px;
+    }
+    .text {
+        height: 34px;
+        background: rgba(8, 35, 63, 0.6);
+        border: 2px solid rgba(34, 128, 191, 0.3);
+        border-radius: 5px;
+        color: #B4D0E8;
+    }
+    .dialog-search:focus,
+    .text.dialog-search:hover,
+    .text.dialog-search:focus {
+        border: 2px solid #2280BF;
+    }
+    .section-content:focus {
+        color: #ffffff;
+        @extend .dialog-search;
+    }
+    .k-window-titlebar {
+        background-color: transparent !important;
+        background: url(#{$bgurl}window-head-bg.png) no-repeat top center;
+        background-size: 50% auto;
+        height: 50px;
+    }
+    .k-dialog-titlebar {
+        background-color: transparent !important;
+        height: 50px;
+        position: relative;
+        top: 6px;
+    }
+    .k-dialog-wrapper .k-dialog {
+        position: relative;
+        background-color: transparent !important;
+        background: url(#{$bgurl}window-bg.svg) no-repeat top center;
+        background-size: auto 100%;
+        .slider-dialog {
+            position: absolute;
+            bottom: 0px;
+            top: 0px;
+            width: 100%;
+            display: block;
+            overflow-y: auto;
+            background: url(#{$bgurl}window-bg.svg) no-repeat center center;
+            background-size: 100% auto; // border: 2px solid rgba(24, 162, 245, 0.19);
+            background-image: linear-gradient(-270deg, rgba(6, 66, 112, 0.95) 3%, rgba(10, 44, 79, 0.98) 100%);
+            .back-arrow {
+                height: 30px;
+                width: 100px;
+                cursor: pointer;
+                line-height: 30px;
+                display: block;
+                .icon-arrowleft {
+                    float: left;
+                    padding: 7px 5px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .k-content .k-window-content .k-dialog-content {
+        color: #ffffff;
+        background-color: transparent !important;
+        border-color: none !important;
+        background: url(#{$bgurl}window-foot-bg.png) no-repeat top center;
+        background-size: 50% auto;
+    }
+    .k-window-title {
+        color: #fff;
+        font-size: 20px;
+        position: relative;
+        top: -5px;
+        text-align: center;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.50);
+    }
+    .k-content {
+        color: #ffffff;
+        background-color: transparent !important;
+        border-color: rgba(0, 0, 0, 0.08);
+        background: url(#{$bgurl}window-foot-bg.png) no-repeat bottom center !important;
+    }
+    .k-window-actions {
+        position: relative;
+        top: -10px;
+        right: -3px;
+        width: 65px;
+        background: url(#{$bgurl}window-close-btn.svg) no-repeat top center !important;
+    }
+    .k-window-content {
+        padding: 0 10px;
+    }
+    a.k-dialog-close {
+        position: relative;
+        top: -1px;
+        right: -28px;
+        color: transparent;
+    }
+    a.k-dialog-close:active:hover {
+        color: transparent;
+    }
+    a.k-dialog-close:hover {
+        color: transparent;
+    }
+    .k-textarea {
+        background-color: transparent !important;
+        color: #B4D0E8;
+    }
+    .k-button.k-bare::before {
+        content: "";
+        background-color: currentColor;
+        border-radius: 2px;
+        display: block;
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+        pointer-events: none;
+        position: absolute;
+        z-index: 0;
+        top: 0px;
+        left: 17px;
+        right: -32px;
+        bottom: 5px;
+    }
+    .k-button.k-bare::after {
+        content: "";
+        border: none !important;
+        border-radius: 2px;
+        display: block;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        z-index: 0;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+    }
+    // .k-widget.k-window.k-window-wrapper {
+    //     background: url(#{$bgurl}window-bg.svg) no-repeat center center;
+    //     background-size: 100% auto;
+    // }
+    .k-widget.k-window.k-window-wrapper {
+        background: rgba(11,46,82,0.95) !important;
+        border-radius: 6px;
+    }
+    .k-button.k-primary.k-outline {
+        border-radius: 4px;
+        color: $themefontcolor;
+        @include dailyrecord-botton-blue;
+        .badge {
+            position: absolute;
+            top: -0.6em;
+            background: $sendboxPlot-red;
+        }
+    }
+    .k-multiselect-wrap {
+        max-height: 110px;
+        overflow-y: auto;
+    }
+    .k-multiselect-wrap,
+    .k-combobox .k-dropdown-wrap {
+        color: #B4D0E8;
+        background: rgba(8, 35, 63, 0.6);
+        border: 2px solid rgba(34, 128, 191, 0.3);
+        border-radius: 5px;
+    } // .k-multiselect.k-state-focused .k-multiselect-wrap {
+    //     color: #B4D0E8;
+    //     background: rgba(8, 35, 63, 0.6);
+    //     border: 2px solid rgba(34, 128, 191, 0.3);
+    //     border-radius: 5px;
+    // }
+    .k-combobox .k-dropdown-wrap:hover,
+    .k-state-focused>.k-multiselect-wrap,
+    .k-multiselect-wrap.k-state-hover,
+    .k-multiselect-wrap:hover {
+        color: #B4D0E8;
+        background: rgba(8, 35, 63, 0.6);
+        border: 2px solid #2280BF;
+        border-radius: 5px;
+    }
+    .k-treeview .k-in.k-state-selected,
+    .k-multiselect-wrap ul.k-reset>li.k-button {
+        background: rgba(34, 128, 191, 0.30);
+        border-radius: 2px;
+        color: #fff;
+    }
+    .k-dropdown-wrap .k-select {
+        background: rgba(34, 128, 191, 0.30);
+        color: #fff;
+    }
+    .k-combobox> :hover .k-select {
+        background: #2280BF;
+        color: #fff;
+    }
+    .k-treeview .k-item {
+        color: #9BB8D2;
+    }
+    .k-pager-wrap .k-link:hover,
+    .k-pager-wrap .k-pager-nav:hover,
+    .k-pager-numbers .k-link.k-state-selected,
+    .k-pager-numbers .k-link:link.k-state-selected {
+        background: #2280BF;
+        color: #fff;
+    }
+    ul.k-list {
+        background: #08233F;
+        border: 2px solid rgba(34, 128, 191, 0.40); // border-radius: 4px;
+        color: #9BB8D2;
+    }
+    ul.k-list>li.k-item:hover,
+    ul.k-list>li.k-state-selected {
+        background: rgba(34, 128, 191, 0.30) !important;
+        border-radius: 2px;
+        color: #fff;
+    }
+    .k-grid {
+        color: #B4D0E8;
+        background: rgb(14, 63, 102); // border: 2px solid rgba(34, 128, 191, 0.3);
+        // border-radius: 5px;
+    }
+    .k-grid-content {
+        background: transparent;
+    }
+    .k-grid-pager,
+    .k-grid-header {
+        background: rgba(8, 35, 63, 0.4);
+        color: #B4D0E8;
+    }
+    .k-grid tr.k-alt td {
+        //background: #2280BF;
+        background: rgba(8, 35, 63, 0.2);
+        color: #B4D0E8;
+    }
+    .k-grid td {
+        //background: #6A7B8B;
+        background: rgba(8, 35, 63, 0.1);
+        color: #B4D0E8;
+    }
+    .k-dropzone {
+        color: #B4D0E8;
+        background: rgba(9, 39, 69, 0.95); // border: 2px solid rgba(34, 128, 191, 0.3);
+    }
+    .k-upload .k-upload-button {
+        color: #B4D0E8;
+        border: 2px solid rgba(34, 128, 191, 0.5);
+        background: rgba(9, 39, 69, 0.95);
+    }
+    .k-upload .k-upload-button:hover {
+        color: #fff;
+        border: 2px solid #45AAFF;
+        background-image: linear-gradient(181deg, rgba(52, 165, 251, 0), rgba(4, 113, 206, 0.5));
+    }
+    .box {
+        background: rgba(9, 39, 69, 0.95);
+        border: 2px solid rgba(34, 128, 191, 0.23);
+    }
+    .box-title {
+        background-image: radial-gradient(179px 44px at 0% 0%, rgba(42, 161, 255, .5), rgba(0, 149, 255, 0));
+    }
+    .control-label {
+        color: #9BB8D2;
+    }
+    .control-content {
+        color: #7FA2C0;
+    }
+    .k-textarea {
+        background: rgba(8, 35, 63, 0.60);
+        border: 2px solid rgba(34, 128, 191, 0.30);
+        color: #fff;
+    }
+    .k-textbox {
+        background: rgba(8, 35, 63, 0.60);
+        border: 2px solid rgba(34, 128, 191, 0.30);
+        color: #fff;
+    }
+    .k-textarea:hover,
+    .k-textarea:focus,
+    .k-textbox:hover,
+    .k-textbox:focus {
+        background: rgba(8, 35, 63, 0.60);
+        border: 2px solid #2280BF;
+    }
+    .btn-blue {
+        border: 2px solid rgba(34, 128, 191, 0.5);
+        background: rgba(9, 39, 69, 0.95);
+    }
+    .btn-blue:hover {
+        color: #fff;
+        border: 2px solid #45AAFF;
+        background-image: linear-gradient(181deg, rgba(52, 165, 251, 0), rgba(4, 113, 206, 0.5));
+    }
+    .btn-gold {
+        border: 2px solid rgba(34, 128, 191, 0.5);
+        background: rgba(9, 39, 69, 0.95);
+    }
+    .btn-gold:hover {
+        color: #fff;
+        border: 2px solid #D98949;
+        background-image: linear-gradient(181deg, rgba(250, 187, 97, 0), rgba(197, 102, 26, 0.5));
+    }
+    .btn-opera,
+    .btn-opera:hover,
+    .btn-opera:focus,
+    .btn-opera:active {
+        color: #62C4FF;
+        // border: 1px solid rgba(34, 128, 191, 0.30);
+        border: 2px solid #18A2F5;
+    }
+    .span-border.active,
+    .span-border:hover {
+        background: rgba(8, 35, 63, 0.60);
+        border: 2px solid #2280BF;
+    }
+    .section {
+        border: 2px solid rgba(24, 162, 245, 0.19); //background-image: linear-gradient(-270deg, rgba(6, 66, 112, 0.95) 3%, rgba(10, 44, 79, 0.98) 100%);
+        background: rgb(6, 66, 112);
+    }
+    .ds-btn-sm {
+        border: 2px solid rgba(34, 128, 191, 0.30);
+    }
+
+    /**autocomplete框输入字体颜色更改 */
+    .k-autocomplete .k-input {
+        color: #fff !important;
+    }
+    // dialog
+    // .k-dialog-wrapper .k-dialog .k-button .k-icon{
+    //     align-self: center;
+    //     position: relative;
+    //     color: TRANSPARENT;
+    // }
+    // .k-icon .k-i-x::before{
+    //     color: TRANSPARENT;
+    // }
+}
